@@ -63,15 +63,15 @@ Ext.define('FunCheap.view.Main', {
 		    selectedCls: 'x-view-nocolor',
 		  
 		    itemTpl: new Ext.XTemplate(
-			'<div class="neighblistitem">',
+			//'<div class="neighblistitem">',
 			    
 			    '<div class="profilepicture">',
 				'<img class="profilepic_list" src={imgsrc}>',
 			    '</div>',
 			    '<div class="deal-list-title">{title}</div><br>',
-			    '<div class="deal-list-info">{info}</div>',
+			    '<div class="deal-list-info">{info}</div>'
 			    
-			'</div>'    
+			//'</div>'    
 			)
 		}
 	    ]

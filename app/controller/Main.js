@@ -26,13 +26,20 @@ Ext.define('FunCheap.controller.Main', {
     
    funcheapAPI: function(){
     
-	var apiSuccess = function(result){
+	/*var apiSuccess = function(result){
 	    console.log(result);
 	    Ext.getStore('DealStore').setData(result);
 	}
+	*/
+	var offset = this.dayOffset;
+	var date = moment().format('YYYY/MM/DD');//'2012/12/25'
 	
 	Ext.data.JsonP.request({
 	    url: "https://script.google.com/macros/s/AKfycbxl86Dlfijv6UV6gsvb-ixVEY-eBc534tSlFr1VM9xRKNdpoZg/exec?prefix=FunCheap.app.getController('Main').apiSuccess",
+	    params: {
+		offset: offset,
+		date:  date
+	    },
 	    success: function(result){
 		console.log(result);
 		Ext.getStore('DealStore').setData(result);
