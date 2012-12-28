@@ -20,9 +20,7 @@ Ext.define('FunCheap.view.Main', {
     ],
     config: {
       id: 'mainView',
-      layout: {
-	type: 'vbox'
-      },
+      
        items: [
 	{
 	    xtype: 'toolbar',
@@ -51,23 +49,29 @@ Ext.define('FunCheap.view.Main', {
 	},
 	{
 	    xtype: 'panel',
-	    height: '1000px',
-	    html: 'fucka you',
+	    height: '100%',
 	    layout: {
 	       type: 'fit'
 	       },
 	    items: [
 		{  
 		    xtype: 'list',
-		    scrollable: true,
+		  //  scrollable: true,
 		    id: 'dealList',
 		    store: 'DealStore',
 		    singleSelect: true,
 		    selectedCls: 'x-view-nocolor',
+		  
 		    itemTpl: new Ext.XTemplate(
-			'<img src={imgsrc}>',
-			'{title}<br>',
-			'{info}'
+			'<div class="neighblistitem">',
+			    
+			    '<div class="profilepicture">',
+				'<img class="profilepic_list" src={imgsrc}>',
+			    '</div>',
+			    '<div class="deal-list-title">{title}</div><br>',
+			    '<div class="deal-list-info">{info}</div>',
+			    
+			'</div>'    
 			)
 		}
 	    ]

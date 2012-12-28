@@ -9,7 +9,7 @@ Ext.define('FunCheap.model.Deal', {
             {name: 'info',  type: 'string'},
             {name: 'desc',   type: 'string'},
             {name: 'imgsrc',  type: 'string'},
-            {name: 'imgsrc',  type: 'string'}
+            {name: 'href',  type: 'string'}
             
             
         ]

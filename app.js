@@ -43,7 +43,6 @@ Ext.application({
     ],
 //First thing happens after init functions
     launch: function() {
-              
          //Creates the views      
         Ext.create('FunCheap.view.Main', {fullscreen: true});
         
